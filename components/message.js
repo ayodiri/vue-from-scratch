@@ -7,7 +7,7 @@ Vue.component('message', {
     template: `
         <div>
             <h2>Componente Message</h2>
-            <p>{{ message }}<p>
+            <p>{{ message }}</p>
         </div>
     `
 })

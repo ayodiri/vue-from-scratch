@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Vuejs 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="components/message.js"></script>
     <script src="components/computed-properties.js"></script>
     <script src="components/metodos.js"></script>
     <script src="components/vmodel.js"></script>
     <script src="components/vmodel-checboxes.js"></script>
+    <script src="components/emitir.js"></script>
 </head>
 <body>
     <div id="app">
@@ -23,6 +23,7 @@
         <metodos></metodos>
         <vmodel></vmodel>
         <vmodel-checkboxes></vmodel-checkboxes>
+        <emitir @show_card_brand="showCarBrandFromEmitCMP($event)"></emitir>
     </div>
     <script>
         new Vue({
@@ -32,6 +33,11 @@
                     message: 'Kaixo Vue JS 2 mundua!!!!'
                 }
             },
+            methods: {
+                showCarBrandFromEmitCMP(carBrand) {
+                    alert(carBrand)
+                }
+            }
         })
     </script>
 </body>
